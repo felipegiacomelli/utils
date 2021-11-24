@@ -17,7 +17,11 @@ def MakeDirectory(directory):
         os.makedirs(directory)
 
 
-def GetDirectoyFiles(directory, extension='.csv'):
+def GetDirectoyFiles(directory, extension=".csv"):
     return sorted(
-        [os.path.join(directory, f) for f in os.listdir(directory) if f.endswith(extension)]
+        [
+            os.path.join(directory, f)
+            for f in os.listdir(directory)
+            if f.endswith(extension)
+        ]
     )
